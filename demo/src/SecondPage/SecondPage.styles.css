@@ -5,9 +5,11 @@
   /* max-width: 1095px; */
   min-height: 100vmin;
   min-height: -webkit-fill-available;
-    background-repeat: no-repeat;
-  background-attachment: inherit; 
-   background-position: top;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  background-attachment: scroll;
+  background-position: top;
   position: relative;
   background-size: 100% 100%;
   background-image: url('./../images/Backgrounds/2ndBG.jpg');

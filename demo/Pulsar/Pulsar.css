@@ -1,0 +1,108 @@
+#container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  border: 3px solid rgba(196,106, 111, 1);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+@keyframes comeUpp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-5rem);
+  }
+}
+.hello {
+  animation: comeUpp .5s ease-out 0.75s;
+  animation-fill-mode: both;
+  animation-delay: 0.15s;
+}
+
+#first {
+  position: inherit;
+  top: -3px;
+  left: -3px;
+  /* width: 100px;
+  height: 100px; */
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  animation: 3s bounceAnimation linear infinite;
+  border: 2px solid rgba(239, 158, 45, 1);
+  animation-delay: -3s;
+}
+#second {
+  position: inherit;
+  top: -3px;
+  left: -3px;
+  /* width: 100px;
+  height: 100px; */
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  animation: 3s bounceAnimation linear infinite;
+  border: 2px solid rgba(239, 158, 45, 1);
+  animation-delay: -2s;
+}
+#third {
+  position: inherit;
+  top: -3px;
+  left: -3px;
+  /* width: 100px;
+  height: 100px; */
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  animation: 3s bounceAnimation linear infinite;
+  border: 2px solid rgba(239, 158, 45, 1);
+  animation-delay: -4s;
+}
+
+@keyframes bounceAnimation {
+  from {
+    background-color: rgba(222, 158, 90, 1);
+    transform: scale(0);
+    border: 0;
+  }
+  20% {
+    background-color: rgba(222, 158, 90, 1);
+  }
+  40% {
+    background-color: rgba(222, 158, 90, 1);
+    transform: scale(0.2);
+    border: 2px solid rgba(196,106, 111, 1);
+  }
+  60% {
+    background-color: rgba(222, 158, 90, 1);
+    transform: scale(0.4);
+    border: 3px solid rgba(196,106, 111, 1);
+  }
+  80% {
+    background-color: rgba(222, 158, 90, 0.6);
+    transform: scale(0.7);
+    border: 4px solid rgba(196,106, 111, 1);
+  }
+  to {
+    opacity: 1;
+    background-color: rgba(222, 158, 90, 0.11);
+    transform: scale(01);
+    border:4px solid rgba(166,106, 111, 1);
+  }
+};

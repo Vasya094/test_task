@@ -3,13 +3,14 @@ html {
     overflow: hidden;
     min-height: 100%;
     position: fixed !important;
+
 }
 
-/* body {
+body {
     overflow: auto;
     height: 100%;
-} */
-body {
+} 
+/* body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -18,5 +19,123 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     width: 100%;
+    color: #ef9e2d8e;
   
+} */
+  .custom-class {
+    top: 40%;
+    position: inherit;
+      left: 40%;
+   
   }
+  
+  
+  
+  .cont {
+    -webkit-appearance: none;
+    background-color: rgba(255, 255, 255, 0);
+    width: 40px;
+    height: 40px;
+    
+    cursor: pointer;
+    position: relative;
+  }
+  
+  p {
+      height: 900px;
+  }
+ 
+  .custom-class {
+    top: 50%;
+    position: inherit;
+      left: 80%;
+   
+  }
+  .parallax-inner {
+      height: 90px;
+  }
+  .container > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .text {
+    pointer-events: none;
+    justify-content: start !important;
+    font-family: 'Kanit', sans-serif;
+    line-height: 0px;
+    text-transform: uppercase;
+  }
+  
+  .number {
+    font-size: 450px;
+    color: #373c4c;
+  }
+  
+  .number span {
+    display: inline-block;
+    position: relative;
+    transform: translate3d(-35%, 0, 0);
+  }
+  
+  .header {
+    margin-left: 350px;
+    font-size: 70px;
+    color: white;
+  }
+  
+  .stripe {
+    height: 2px;
+    width: auto;
+  }
+  
+  .slopeBegin {
+    background-color: #20232f;
+    clip-path: polygon(20vw 0, 70% 0, calc(70% - 20vw) 100%, 0 100%);
+  }
+  
+  .slopeEnd {
+    clip-path: polygon(70% 0, 100% 0, calc(100% - 20vw) 100%, calc(70% - 20vw) 100%);
+  }
+  
+  .slopeBegin,
+  .slopeEnd {
+    position: absolute;
+    width: 140%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .pink {
+    background: linear-gradient(to right, deeppink 0%, coral 100%);
+  }
+  
+  .teal {
+    background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
+  }
+  
+  .tomato {
+    background: linear-gradient(to right, tomato 0%, gold 100%);
+  }
+  .parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+  }
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .parallax__layer--base {
+    transform: translateZ(0);
+  }
+  .parallax__layer--back {
+    transform: translateZ(-1px);
+  }
+   

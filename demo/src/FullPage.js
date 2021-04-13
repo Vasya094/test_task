@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Pager } from "react-bootstrap";
-
-import ReactPageScroller from "./page-scroller";
+import { Parallax, ParallaxLayer } from "react-spring/addons";
+import ReactTouchEvents from "react-touch-events";
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import ReactPageScroller from 'react-page-scroller';
+// import ReactPageScroller from "./page-scroller";
 import SecondComponent from "./SecondPage/SecondComponent";
 import ThirdComponent from "./ThirdPage/ThirdComponent";
 
@@ -9,62 +12,75 @@ import "./index.css";
 import Dots from "./Dots/Dots";
 import FirstPage from "./FirstPage/FirstComponent";
 
-export default class FullPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { currentPage: null };
-  }
+const FullPage = () => {
+  const firstPageContainer = useRef();
 
-  handlePageChange = number => {
-    this.setState({ currentPage: number });
+  const [currentPage, setCurrentPage] = useState(0);
+  const [trans, setTrans] = useState(null);
+  const [parallaxClass, setParallaxClass] = useState("");
+  const handlePageChange = ( event ) => {
+    console.log( event, ': number after ', currentPage, ': currentPage after' )
+    
+    
+    setCurrentPage(number);
   };
 
-  handleBeforePageChange = number => {
-    console.log(number);
-  };
-
-  getPagesNumbers = () => {
+  const getPagesNumbers = () => {
     const pageNumbers = [];
 
     for (let i = 1; i <= 3; i++) {
       pageNumbers.push(
-        <Pager.Item key={i} eventKey={i - 1} onSelect={this.handlePageChange}>
+        <Pager.Item key={i} eventKey={i - 1} onSelect={handlePageChange}>
           {i}
-        </Pager.Item>,
+        </Pager.Item>
       );
     }
 
     return [...pageNumbers];
   };
-
-  render() {
-    const pagesNumbers = this.getPagesNumbers();
-    console.log(pagesNumbers);
-    return (
-      <div id="scrollArea">
-        <ReactPageScroller
-          style={{
-            maxWidth: "100%",
-            overflowX: "hidden",
-            overflowY: "hidden",
-            width: "100%",
-            webkitBoxSizing: "border-box",
-            mozBoxSizing: "border-box",
-            boxSizing: "border-box",
-          }}
-          pageOnChange={this.handlePageChange}
-          onBeforePageScroll={this.handleBeforePageChange}
-          customPageNumber={this.state.currentPage}
-        >
-          <FirstPage />
-          <SecondComponent />
-          <ThirdComponent />
-        </ReactPageScroller>
-        {/* <Pager className="pagination-additional-class" bsSize="large">
-          {pagesNumbers}
-        </Pager> */}
-        <Dots slides={[1, 2, 3]} activeSlide={this.state.currentPage} />
-      </div>
-    );
+  const beforeHandler = ( num ) => {
+    console.log(num, ': num before', currentPage, ': currentPage before')
+    if ( num===1 && currentPage ===0 )
+    {
+      setParallaxClass('test')
+    }
+    
+    if ( num===0 && currentPage ===1 )
+    {
+      setParallaxClass('kest')
+    }
+    setCurrentPage(num)
   }
-}
+
+  const pagesNumbers = getPagesNumbers();
+  return (
+    <div>
+    <ReactPageScroller
+      style={{
+        maxWidth: "100%",
+        overflowX: "hidden",
+        overflowY: "hidden",
+        width: "100%",
+        webkitBoxSizing: "border-box",
+        mozBoxSizing: "border-box",
+        boxSizing: "border-box",
+        }}
+      onBeforePageScroll={beforeHandler}
+      className="hey"
+      customPageNumber={currentPage}
+      // onWheel={handlePageChange}
+    >
+      {/* <div onWheel={wheelHandler}> */}
+      <FirstPage parallaxClass={parallaxClass}> </FirstPage>
+
+      <SecondComponent />
+
+      <ThirdComponent />
+      
+    </ReactPageScroller>
+    <Dots slides={[1, 2, 3]} activeSlide={currentPage} /></div>
+    //  </ReactTouchEvents>
+  );
+};
+
+export default FullPage;

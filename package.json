@@ -23,7 +23,13 @@
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.1.5",
     "babel-polyfill": "^6.26.0",
+    "materialize-css": "^1.0.0",
     "react-elastic-carousel": "^0.11.4",
+    "react-page-scroller": "^2.1.0",
+    "react-scroll-parallax": "^2.3.5",
+    "react-scroll-wheel-handler": "^2.0.1",
+    "react-spring": "7.2.8",
+    "react-touch-events": "^3.0.0",
     "styled-components": "^5.2.3"
   },
   "peerDependencies": {

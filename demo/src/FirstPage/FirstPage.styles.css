@@ -4,9 +4,143 @@
   min-height: 100vmin;
   min-height: -webkit-fill-available;
   background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
   background-attachment: scroll;
   background-position: top;
   position: relative;
   background-size: 100% 100%;
   background-image: url('./../images/Backgrounds/BG1.jpg');
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@keyframes comeUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-8rem);
+  }
+}
+@keyframes comeDown {
+  0% {
+    opacity: 1;
+    transform: translateY(-8rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#bigPulsarText{
+  position: relative;
+    left: 146%;
+    height: 3px;
+    text-align: center;
+    min-width: 12rem;
+    color: blue;
+    font-size: x-large;
+}
+#middlePulsarText{
+  position: relative;
+    height: 3px;
+    top: -36px;
+    left: -63px;
+    text-align: center;
+    min-width: 12rem;
+    color: blue;
+    font-size: x-large;
+}
+#firstSmallPulsarText{
+  position: relative;
+    height: 3px;
+    top: -59%;
+    left: -350%;
+    text-align: center;
+    min-width: 18rem;
+    text-align: center;
+    color: blue;
+    font-size: x-large;
+}
+#secondSmallPulsarText{
+  position: relative;
+    height: 3px;
+    top: -59%;
+    left: -243%;
+    text-align: center;
+    min-width: 18rem;
+    text-align: center;
+    color: blue;
+    font-size: x-large;
+}
+
+#test-header {
+  color: blue;
+  width: 700px;
+  height: 300px;
+  font-size: 5rem;
+  min-width: 300px;
+  position: absolute;
+  top: 37%;
+  left: 53%;
+  z-index: 2;
+  /* animation: Rotate 0.3s ease-out 0.75s;
+  animation-fill-mode: backwards; */
+}
+#pulscont1 {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 36%;
+  left: 56%;
+  z-index: 2;
+}
+#pulscont2 {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 56%;
+  left: 25%;
+  z-index: 2;
+}
+#pulscont3 {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 69%;
+  left: 45.5%;
+  z-index: 2;
+}
+#pulscont4 {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 66%;
+  left: 80%;
+  z-index: 2;
+}
+#firstPageHeader {
+  position: absolute;
+  top: -78%;
+  width: 870px;
+  min-width: 300px;
+  left: -67%;
+}
+.test {
+  animation: comeUp 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.15s;
+  /* animation-delay: .5s; */
+}
+.kest {
+  animation: comeDown 1s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+  /* animation-delay: -0.5s; */
+
 }

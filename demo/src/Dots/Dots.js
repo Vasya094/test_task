@@ -23,7 +23,7 @@ const Dots = ({ slides, activeSlide }) => {
   return (
     <div
       css={css`
-        position: absolute;
+        position: fixed;
         bottom: 25px;
         bottom: 50%;
         right: -47%;
