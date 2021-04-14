@@ -29,7 +29,22 @@ body {
    
   }
   
-  
+  #cont3 {
+    color: #20232f;
+    /* background-image: url('./images/Backgrounds/background-3.jpg');
+    min-height: 100vmin;
+    min-height: -webkit-fill-available;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100vh;
+    background-attachment: inherit;
+    width: inherit;
+    width: 100vw;
+    background-attachment: scroll;
+    background-position: top;
+    position: relative;
+    background-size: 100% 100%; */
+  }
   
   .cont {
     -webkit-appearance: none;
@@ -98,6 +113,7 @@ body {
   .slopeEnd {
     clip-path: polygon(70% 0, 100% 0, calc(100% - 20vw) 100%, calc(70% - 20vw) 100%);
   }
+  
   
   .slopeBegin,
   .slopeEnd {

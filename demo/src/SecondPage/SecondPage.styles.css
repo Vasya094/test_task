@@ -78,6 +78,41 @@
 
 }
 
+@keyframes comeUp3 {
+  0% {
+    opacity: 1;
+    transform: translate(-48%,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-48%,-8rem);
+  }
+}
+@keyframes comeDown3 {
+  0% {
+    opacity: 1;
+    transform: translate(-48%,-8rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-48%,0);
+  }
+}
+
+.test32 {
+  animation: comeDown3 0.8s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+  
+}
+ .kest32 {
+  animation: comeUp3 1s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+
+}
+
+
 @keyframes comeUpIce {
   
   0% {

@@ -16,7 +16,7 @@ const FullPage = () => {
   const firstPageContainer = useRef();
 
   const [currentPage, setCurrentPage] = useState(0);
-  const [trans, setTrans] = useState(null);
+  const [trans, setTrans] = useState(0);
   const [parallaxClass, setParallaxClass] = useState("");
   const handlePageChange = ( event ) => {
     console.log( event, ': number after ', currentPage, ': currentPage after' )
@@ -38,7 +38,9 @@ const FullPage = () => {
 
     return [...pageNumbers];
   };
+
   const beforeHandler = ( num ) => {
+    setTrans(num )
     console.log(num, ': num before', currentPage, ': currentPage before')
     if ( num===1 && currentPage ===0 )
     {
@@ -53,9 +55,21 @@ const FullPage = () => {
     {
       setParallaxClass('kest2')
     }
-    
+    if ( num===2 && currentPage ===1 )
+    {
+      setParallaxClass('kest3')
+    }
+    if ( num===1 && currentPage ===2 )
+    {
+      setParallaxClass('test3')
+    }
+    setTimeout(() => {
+      console.log("object")
+    }, 1000);
+    setTrans(num )
     setCurrentPage(num )
   }
+  
 
   const pagesNumbers = getPagesNumbers();
   return (
@@ -70,21 +84,22 @@ const FullPage = () => {
         mozBoxSizing: "border-box",
         boxSizing: "border-box",
         }}
-      onBeforePageScroll={beforeHandler}
-      className="hey"
+        renderAllPagesOnFirstRender
+        onBeforePageScroll={beforeHandler}
+        
+        className="hey"
       customPageNumber={currentPage}
-      // onWheel={handlePageChange}
-    >
-      {/* <div onWheel={wheelHandler}> */}
+   >
       <FirstPage parallaxClass={parallaxClass}> </FirstPage>
 
-      <SecondComponent parallaxClass={parallaxClass} />
-<TherdPage />
+        <SecondComponent parallaxClass={parallaxClass} />
+        <TherdPage parallaxClass={parallaxClass} />
+      
        
       
     </ReactPageScroller>
-    <Dots slides={[1, 2, 3]} activeSlide={currentPage} /></div>
-    //  </ReactTouchEvents>
+    <Dots slides={[0, 1, 2]} activeSlide={trans} />
+     </div>
   );
 };
 

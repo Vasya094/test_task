@@ -2,10 +2,11 @@ import React from "react";
 import "./SecondPage.styles.css";
 
 const SecondPage = ( { parallaxClass } ) => {
-  console.log(parallaxClass + "2")
+  console.log(parallaxClass + " parallaxClass")
   return <div className="second-page">
     <div id="secondPageHeader" className={parallaxClass + "2"}>
-      <h1>Основа терапии &#8213; патогенез СД2</h1>
+      <h1 style={{fontWeight: "100"
+}}>Основа терапии &#8213; патогенез СД2</h1>
      </div>
       <div id="smallIce" className={parallaxClass + "Ice"}>
 <img style={{width: "8vh",

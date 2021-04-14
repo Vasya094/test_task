@@ -1,19 +1,40 @@
 .third_page {
-  background-image: url(https://firebasestorage.googleapis.com/v0/b/test-task-6934a.appspot.com/o/background-3.jpg?alt=media&token=c9f6791c-1b5f-4007-b237-51c57d12ecdc);
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/test-task-6934a.appspot.com/o/background-3.jpg?alt=media&token=c9f6791c-1b5f-4007-b237-51c57d12ecdc');
+    /* background-image: url('./../images/Backgrounds/background-3.jpg'); */
+    min-height: 100vmin;
+    min-height: -webkit-fill-available;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100vh;
+    background-attachment: inherit;
+    width: inherit;
+    width: 100vw;
+    background-attachment: scroll;
+    background-position: top;
+    position: relative;
+    background-size: 100% 100%;
+  }
 
-  min-height: 100vmin;
-  min-height: -webkit-fill-available;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
-  background-attachment: scroll;
-  background-position: top;
-  position: relative;
-  background-size: 100% 100%;
-  /* background-image: url('./../images/Backgrounds/BG1.jpg'); */
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
+  @keyframes comeUp3 {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-8rem);
+    }
+  }
+  @keyframes comeDown3 {
+    0% {
+      opacity: 1;
+      transform: translateY(-8rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
 
