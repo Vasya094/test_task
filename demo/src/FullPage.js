@@ -6,11 +6,11 @@ import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import ReactPageScroller from 'react-page-scroller';
 // import ReactPageScroller from "./page-scroller";
 import SecondComponent from "./SecondPage/SecondComponent";
-import TherdPage from "./ThirdPage/ThirdComponent";
 
 import "./index.css";
 import Dots from "./Dots/Dots";
 import FirstPage from "./FirstPage/FirstComponent";
+import TherdPage from "./ThirdPage/ThirdComponent";
 
 const FullPage = () => {
   const firstPageContainer = useRef();
@@ -54,7 +54,7 @@ const FullPage = () => {
       setParallaxClass('kest2')
     }
     
-    setCurrentPage(num)
+    setCurrentPage(num )
   }
 
   const pagesNumbers = getPagesNumbers();
@@ -79,8 +79,8 @@ const FullPage = () => {
       <FirstPage parallaxClass={parallaxClass}> </FirstPage>
 
       <SecondComponent parallaxClass={parallaxClass} />
-
-      <TherdPage />
+<TherdPage />
+       
       
     </ReactPageScroller>
     <Dots slides={[1, 2, 3]} activeSlide={currentPage} /></div>

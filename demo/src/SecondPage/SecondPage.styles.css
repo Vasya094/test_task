@@ -52,6 +52,7 @@
   width: 700px;
   /* height: 300px; */
   font-size: 5rem;
+  font-weight: 100;
   min-width: 300px;  
   z-index: 2;
   position: relative;
@@ -75,4 +76,64 @@
   animation-fill-mode: backwards;
   animation-delay: 0.1s;
 
+}
+
+@keyframes comeUpIce {
+  
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(8rem);
+  }
+}
+@keyframes comeDownIce {
+  from {
+    opacity: 1;
+    transform: translateY(10rem);
+
+  }
+  to {
+    opacity: 1;
+    transform: translateY( 0);
+  }
+  
+
+}
+
+
+.testIce {
+  animation: comeDownIce 0.8s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+  
+}
+ .kest2Ice {
+  animation: comeUpIce 0.8s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+
+}
+
+#smallIce {
+  left: 7%;
+    top: 0%;
+    position: relative;
+}
+#blurIce {
+  left: 68%;
+    top: -2%;
+    position: relative;
+}
+#middleIce{
+  left: 24%;
+    position: relative;
+    top: 25%;
+}
+#bigIce{
+  left: 88%;
+    position: relative;
+    top: -47%;
 }

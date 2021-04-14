@@ -1,5 +1,6 @@
-.Slider_Container {
+.third_page {
   background-image: url(https://firebasestorage.googleapis.com/v0/b/test-task-6934a.appspot.com/o/background-3.jpg?alt=media&token=c9f6791c-1b5f-4007-b237-51c57d12ecdc);
+
   min-height: 100vmin;
   min-height: -webkit-fill-available;
   background-repeat: no-repeat;
@@ -14,74 +15,5 @@
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-#range {
-  -webkit-appearance: none;
-
-  border-radius: 0;
-  position: absolute;
-  width: 60vw;
-  left: 50%;
-  /* background: url('./images/png/scroll_ice.png');  */
-  top: 288%;
-  transform: translateX(-50%);
-  height: 10px;
-}
-
-#range {
-  --thumbSize: 18px;
-  --trackSize: 8px;
-  --thumbBg: #fff;
-  --trackBg: #f2f2f2;
-  --progressBg: #262626;
-
-  /* webkit progress workaround */
-  --webkitProgressPercent: 0%;
-}
-
-#range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  background-color: rgba(255, 255, 255, 0);
-  width: 40px;
-  height: 40px;
-  background-image: url(./../images/png/scroll_ice.png);
-  background-size: 100%;
-  cursor: pointer;
-  position: relative;
-}
-
-#range::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  background-color: rgba(255, 255, 255, 0);
-  width: 40px;
-  height: 40px;
-  transform: translate3d(0,0,0);  
-  /* background-image: url(./images/png/scroll_ice.png); */
-  background-size: 100%;
-  cursor: pointer;
-  position: relative;
-}
-
-/* #range::-webkit-range-thumb {
-  -webkit-appearance: none;
-  background-color: green;
-  width: 40px;
-  height: 40px;
-  background-image: url(./images/png/scroll_ice.png);
-  cursor: pointer;
-  position: relative;
-} */
-
-
-
-input[type=range]:focus {
-  outline: none;
-  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-}
-
-.RangeSlider {
-  position: absolute;
-
 }
 
