@@ -79,24 +79,28 @@
 }
 
 @keyframes comeUp3 {
-  0% {
+  from {
     opacity: 1;
-    transform: translate(-48%,0);
+    transform: translate(-48%, 0);
+
   }
-  100% {
+  to {
     opacity: 1;
-    transform: translate(-48%,-8rem);
+    transform: translate(-48%, -10rem);
   }
 }
 @keyframes comeDown3 {
-  0% {
+  
+  
+  from{
     opacity: 1;
-    transform: translate(-48%,-8rem);
+    transform: translate(-48%, -6rem);
   }
-  100% {
+  to {
     opacity: 1;
-    transform: translate(-48%,0);
+    transform: translate(-48%, 0);
   }
+  
 }
 
 .test32 {
@@ -137,6 +141,30 @@
   
 
 }
+@keyframes comeUp2Ice {
+  
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-8rem);
+  }
+}
+@keyframes comeDown2Ice {
+  from {
+    opacity: 1;
+    transform: translateY(-6rem);
+
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+}
 
 
 .testIce {
@@ -147,6 +175,18 @@
 }
  .kest2Ice {
   animation: comeUpIce 0.8s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+
+}
+.test3Ice {
+  animation: comeDown2Ice 0.8s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+  
+}
+ .kest3Ice {
+  animation: comeUp2Ice 0.8s ease-out 0.75s;
   animation-fill-mode: backwards;
   animation-delay: 0.1s;
 
