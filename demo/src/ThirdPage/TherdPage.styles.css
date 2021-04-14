@@ -1,6 +1,5 @@
 .Slider_Container {
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/test-task-6934a.appspot.com/o/background-3.jpg?alt=media&token=c9f6791c-1b5f-4007-b237-51c57d12ecdc');
-  /* background-image: url('./../images/Backgrounds/background-3.jpg'); */
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/test-task-6934a.appspot.com/o/background-3.jpg?alt=media&token=c9f6791c-1b5f-4007-b237-51c57d12ecdc);
   min-height: 100vmin;
   min-height: -webkit-fill-available;
   background-repeat: no-repeat;
@@ -10,6 +9,11 @@
   background-position: top;
   position: relative;
   background-size: 100% 100%;
+  /* background-image: url('./../images/Backgrounds/BG1.jpg'); */
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #range {

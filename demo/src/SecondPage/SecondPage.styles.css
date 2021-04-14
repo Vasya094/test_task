@@ -10,7 +10,69 @@
   width: 100vw;
   background-attachment: scroll;
   background-position: top;
-  position: relative;
+  position: absolute;
   background-size: 100% 100%;
   background-image: url('./../images/Backgrounds/2ndBG.jpg');
+}
+@keyframes comeUp2 {
+  /* from {
+    opacity: 1;
+    transform: translate(-48%, 0);
+
+  }
+  
+  to {
+    transform: translate(-48%, 10rem);
+
+  } */
+  0% {
+    opacity: 1;
+    transform: translate(-48%,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-48%,8rem);
+  }
+}
+@keyframes comeDown2 {
+  from {
+    opacity: 1;
+    transform: translate(-48%, 10rem);
+
+  }
+  to {
+    opacity: 1;
+    transform: translate(-48%, 0);
+  }
+  
+
+}
+#secondPageHeader {
+  color: white;
+  width: 700px;
+  /* height: 300px; */
+  font-size: 5rem;
+  min-width: 300px;  
+  z-index: 2;
+  position: relative;
+  top: 27%;
+  width: 789px;
+  min-width: 300px;
+  left: 50%;
+  transform: translateX(-48%);
+  font-family: system-ui;
+  font-weight: 100;
+  text-align: center;
+}
+.test2 {
+  animation: comeDown2 0.8s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+  
+}
+ .kest22 {
+  animation: comeUp2 1s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+
 }

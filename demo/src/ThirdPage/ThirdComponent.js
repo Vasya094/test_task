@@ -6,7 +6,7 @@ const TherdPage = () => {
   return (
     <div className="Slider_Container">
       <div className="RangeSlider">
-        {/* <RangeSlider /> */}
+         <RangeSlider /> 
       </div>
     </div>
   );

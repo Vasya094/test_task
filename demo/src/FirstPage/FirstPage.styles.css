@@ -131,16 +131,15 @@
   min-width: 300px;
   left: -67%;
 }
-.test {
+.test, .tes {
   animation: comeUp 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
   animation-delay: 0.15s;
   /* animation-delay: .5s; */
 }
-.kest {
+.kest, .kes {
   animation: comeDown 1s ease-out 0.75s;
   animation-fill-mode: backwards;
   animation-delay: 0.3s;
   /* animation-delay: -0.5s; */
-
 }
